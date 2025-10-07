@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paiement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="paiements1.css">
+</head>
+<body>
+
+  <header>
+    <h1>💳 Paiement de votre commande</h1>
+  </header>
+
+  <main>
+    <form id="paiement-form">
+      <label for="methode">Méthode de paiement :</label>
+      <select id="methode" name="methode" required>
+        <option value="">-- Sélectionnez --</option>
+        <option value="OM">Orange Money</option>
+        <option value="MoMo">MTN Money</option>
+      </select>
+
+      <label for="numero">Numéro de téléphone :</label>
+      <input type="tel" id="numero" name="numero" placeholder="Ex: 690123456" required>
+
+      <button type="submit">Confirmer le paiement</button>
+    </form>
+
+    <div id="confirmation" style="display:none;"></div>
+  </main>
+
+  <script src="paiement.js"></script>
+</body>
+</html>

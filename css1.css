@@ -1,0 +1,295 @@
+body {
+  font-family : Arial, sans-serif ;
+  margin : 0 ;
+  background : #f8f9fa ;
+  color : #333 ;
+}
+
+/* === hEADER === */
+header {
+  background-color : #fff ;
+  box-shadow : 0 2px 5px rgba(0,0,0,0.1) ;
+  position : sticky ;
+  top : 0 ;
+  z-index : 10 ;
+}
+
+.Nutrifresh-logo{
+  height: 80px;
+  margin-right: 40px;
+}
+
+.navbar {
+  display : flex ;
+  justify-content : space-between ;
+  align-items : center ;
+  padding : 15px 20px ;
+  background-color: #111;
+}
+
+.logo {
+  font-size : 24px ;
+  font-weight : bold ;
+  color : #F57C00 ;
+}
+
+.nav-links {
+  display : flex ;
+  gap : 25px ;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration : none ;
+  color :#fff ;
+  font-weight : 500 ;
+  transition : color 0.3s ease;
+}
+
+.nav-links a :hover {
+  color : #F57C00 ;
+ }
+
+.menu-toggle {
+  display : none ;
+  background : none ;
+  border : none ;
+  font-size : 28px ;
+  cursor : pointer ;
+  color : #F57C00 ;
+}
+
+/* === RECHERCHE === */
+.search-bar {
+  text-align : center ;
+  padding : 10px 0 15px 0 ;
+  background-color : #111 ;
+}
+
+.search-bar input {
+  width : 80% ;
+  max-width : 400px ;
+  padding : 10px 15px ;
+  font-size : 16px ;
+  border : 2px solid #F57C00 ;
+  border-radius : 25px ;
+  outline : none ;
+  transition : 0.3s ;
+}
+
+.search-bar input :focus {
+  border-color : #F57C00 ;
+  box-shadow : 0 0 5px #F57C00 ;
+}
+
+
+#nos-produits h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #111;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+/* === GALERIE === */
+.carousel-container {
+  display : flex ;
+  align-items : center ;
+  justify-content : center ;
+  position : relative ;
+  margin : 25px auto ;
+  max-width : 1000px ;
+}
+
+.product-gallery {
+  overflow-x : hidden ;
+  width : 90% ;
+  background-color : #fff ;
+  border-radius : 15px ;
+  box-shadow : 0 2px 10px rgba(0,0,0,0.1) ;
+  padding : 15px 0 ;
+}
+
+.gallery-track {
+  display : flex ;
+  align-items : center ;
+  gap : 20px ;
+  padding : 0 15px ;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  background-color: #F57C00;
+}
+
+@keyframes bounceOut {
+  0%   { transform: scale(1) translateY(0); }
+  50%  { transform: scale(1.1) translateY(-8px); }
+  100% { transform: scale(1.08) translateY(-5px); }
+}
+
+.product-item {
+  opacity: 0;
+  flex : 0 0 auto ;
+  text-align : center;
+  transform: translateY(10px);
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-item:hover img {
+  animation: bounceOut 0.4s ease forwards;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-item.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-item img {
+  width : 200px ;
+  height : 150px ;
+  object-fit : cover ;
+  border-radius : 12px ;
+  transition : transform 0.3s ;
+}
+
+.product-item img :hover {
+  transform : scale(1.05) ;
+}
+
+.product-item p {
+  margin-top : 8px ;
+  font-size : 16px ;
+  font-weight : bold ;
+  color : #333 ;
+}
+
+/* Flèches de navigation */
+.prev, .next {
+  background : #F57C00 ;
+  color : white ;
+  border : none ;
+  font-size : 24px ;
+  cursor : pointer ;
+  border-radius : 50% ;
+  width : 40px ;
+  height : 40px ;
+  display : flex ;
+  align-items : center ;
+  justify-content : center ;
+  transition: background 0.3s ;
+}
+
+.prev :hover, .next :hover {
+  background : #F57C00 ;
+}
+
+/* === FOOTER === */
+footer {
+  background-color : #222 ;
+  color : white ;
+  padding-top : 30px ;
+  margin-top : 50px ;
+}
+
+.footer-content {
+  display : flex ;
+  justify-content : space-around ;
+  flex-wrap : wrap ;
+  padding : 20px ;
+}
+
+.footer-section {
+  text-align : center ;
+  margin : 10px ;
+}
+
+.footer-section h3 {
+  color : #F57C00 ;
+  margin-bottom : 10px ;
+}
+
+.footer-section a {
+  display : block ;
+  color : white ;
+  text-decoration : none ;
+  margin : 5px 0 ;
+  transition : color 0.3s ;
+}
+
+.footer-section a :hover {
+  color : #F57C00 ;
+}
+
+/* Icônes réseaux sociaux */
+.social-icons a {
+  font-size : 22px ;
+  margin : 0 10px ;
+  color : white ;
+  transition : color 0.3s ;
+}
+
+.social-icons a :hover {
+  color : #F57C00 ;
+}
+
+.footer-bottom {
+  text-align : center ;
+  padding : 15px ;
+  background-color : #111 ;
+  font-size : 14px ;
+  color : #aaa ;
+}
+
+/* === MENU MOBILE === */
+@media (max-width : 768px) {
+  .nav-links {
+    position : absolute ;
+    top : 65px ;
+    left : 0 ;
+    width : 100% ;
+    background : white ;
+    flex-direction : column ;
+    align-items : center ;
+    gap : 15px ;
+    padding : 15px 0 ;
+    display : none ;
+    border-top : 1px solid #ddd ;
+  }
+
+  .nav-links.show {
+    display : flex ;
+    animation : slideDown 0.3s ease ;
+  }
+
+  @keyframes slideDown {
+    from { opacity : 0 ; transform : translateY(-10px) ; }
+    to { opacity : 1 ; transform : translateY(0) ; }
+  }
+
+  .menu-toggle {
+    display : block ;
+  }
+
+  .footer-content {
+    flex-direction : column ;
+  }
+}
+
+.logo-image{
+    color: #F57C00;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-image img {
+    width: 100%;
+    height: 100%;
+   object-fit: cover;
+   object-position: top center;
+   display: block;
+}
